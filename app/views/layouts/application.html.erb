@@ -65,9 +65,16 @@
   <p class="alert"><%= alert %></p>
 
   <div class="container">
+                <h2>Programme List</h2>
 		<%= yield %>
 		
 		<h2>Twitter Feed</h2>
+		<ul>
+		    <% TwitterApi.our_public_tweets.each do |tweet| %>
+		      <li><%= parsed_tweet tweet %></li>
+		    <% end %>
+		</ul>
+	      
 	</div>	
 
 </body>
