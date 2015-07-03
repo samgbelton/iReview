@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
+	caches_page :index, :show, :new
 	before_action :find_book, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!, only: [:new, :edit]
-
 	def index
 		if params[:category].blank?
 			@books = Book.all.order("created_at DESC")
