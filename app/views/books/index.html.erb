@@ -1,0 +1,26 @@
+<h1 class="current-category"><%= params[:category] %></h1>
+
+<% if @books.count == 0 %>
+
+	<h1>There are no programes currently in this category</h1>
+
+<% else %>	
+
+	<div class="row">
+
+		<% @books.each do |book| %>
+                
+			<div class="col-md-3">
+				<a href="/books/<%= book.id %>">
+					<%= image_tag book.book_img.url(:book_index), class: "book" %>
+					<h2 class="book-title-home"><%= book.title %></h2>
+				</a>
+			</div>	
+
+		<% end %>
+
+	</div>
+	
+<% end %>	
+
+<%= link_to "Add Programme", new_book_path %>
