@@ -50,14 +50,46 @@ p.alert, p.notice {
 
 /* Navbar/navigation styles */
 
+.container-main {
+	width: 1170px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  /* line 10, /Users/sambelton/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_grid.scss */
+  .container-main {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 10, /Users/sambelton/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_grid.scss */
+  .container-main {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 10, /Users/sambelton/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_grid.scss */
+  .container-main {
+    width: 1170px;
+  }
+}
+
+.container-top {
+	padding-left: 15px;
+}
+
+.container-bottom {
+	padding-right: 15px;
+}
+
 .navbar {
 	font-family: 'Arial', sans-serif;
-	border-bottom: 1px solid #bbb !important;
+	border: none !important;
 }
 .navbar-default {
 	background-color: #191919;
 	padding-bottom: 5px;
-	padding-top: 5px;
 
 	.navbar-nav > li > a {
 		color: #ffffff;
@@ -334,3 +366,9 @@ h2.book-title-home {
 		color: #f54997;
 		margin-bottom: 20px;
 }
+
+input {
+	color: #000;
+	height: 25px;
+}
+
